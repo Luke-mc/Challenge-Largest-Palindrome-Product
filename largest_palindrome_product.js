@@ -11,7 +11,35 @@ module.exports = function(digits){
   var palindromeNumber = 0;
 
   // do your work here
+  var arr = [];
+  var factArr = [];
+  var newArray = [];
+// creating max
+  for (var m = 0; m < digits; m++) {
+   newArray.push(9);
+  }
+  var max = parseInt(newArray.join(''));
 
+
+for(var i = max; i >= 0; i--){
+  var result = i * max;
+  result = result.toString();
+
+  if( result[0] === result[3] && result[1] === result[2]){
+   var fact = i.toString();
+   factArr.push(fact);
+   arr.push(result);
+  }
+}
+
+factor_0 = Number(factArr[0]);
+factor_1 = max;
+palindromeNumber = Number(arr[0]);
+
+
+console.log( factor_0);
+console.log( factor_1);
+console.log( palindromeNumber);
 
 
   return {
